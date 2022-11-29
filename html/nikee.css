@@ -1,0 +1,123 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    color:white;
+    font-family:cursive;
+}
+
+#container{
+background-color: black;
+height:100vh;
+
+}
+.all{position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+#container .img img{
+    height:200px;
+}
+.box{
+    margin:40px;
+    border-radius: 39px;
+    background-color:#232323;
+    transform-style: preserve-3d;
+    height:260px;
+    position: relative;
+    top:200px;
+}
+
+.all .box::before{
+    content:"NIKE";
+    position:absolute;
+    top:40px;
+    left:20px;
+    color:white;
+    font-size: 60px;
+    font-weight:900;
+    opacity:0;
+    transition:0.3s ease-in-out;
+}
+.all .box::after{
+    content:"SHOES";
+    position:absolute;
+    bottom:40px;
+    left:0px;
+    color:white;
+    font-size: 55px;
+    font-weight:900;
+    opacity:0;
+    transition:0.3s ease-in-out;
+}
+.all .box:hover::before,.all .box:hover::after{
+    opacity:0.5;
+    z-index:-1;
+}
+.box p{
+    position:absolute;
+    top:0;
+    left:50px;
+    color:white;
+    font-size: 20px;
+    font-weight: 900;
+    transform-style: preserve-3d;
+    text-transform: capitalize;
+    transform:translate3d(0,0,100px);
+    transform-origin: top center;
+    transition:0.3s;
+    opacity:0;
+    z-index:11;
+}
+.box:hover p{
+    opacity:1;
+    top:10px;
+    left:40px;
+}
+.box a{
+    positioN:absolute;
+    bottom:0;
+    left:70px;
+    opacity:0;
+    z-index:11;
+    transform-style: preserve-3d;
+    font-size:20px;
+    text-decoration:none;
+    transition:0.3s;
+     
+    
+}
+.box:hover a{
+    position:absolute;
+    bottom:10px;
+    left:60px;
+    border:3px solid white;
+    border-radius: 20px;
+    background-color: #9bdc28;
+    overflow: hidden;
+    opacity:1;
+     transform:translate3d(0px,0px,100px) 
+}
+.box .img img{
+    transform: rotate(20deg);
+    position:relative;
+    top:20px;
+    left:8px;
+    transform:translate3d(0px,0px,100px) rotate(20deg);
+}
+.box .circle{
+    position:absolute;
+    top:70px;
+    left:40px;
+    height:1px;
+    width:1px;
+    background-color: #9bdc28;
+    border-radius: 100px;
+    transform-style: preserve-3d;
+    transform:translate3d(0px,0px,100px);
+    z-index:-2;
+}

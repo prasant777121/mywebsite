@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prac1.css">
+    <style>
+        section{
+            background: rgb(13, 58, 13);
+            animation:animateg 10s linear infinite;
+        }
+         section .images{position:absolute;
+            display:grid;
+            grid-template-columns:repeat(2,200px);
+            grid-template-rows: repeat(3,300px);
+            grid-gap:20px;
+            
+            
+
+        }
+        .images img{border:20px solid black;
+            
+
+        }
+        .images .a img{
+            height:300px;
+            width:200px; filter:none;
+        }
+        .images .b img{
+            height:300px;
+            width:400px;
+        }
+        .images .c img{
+            height:300px;
+            width:300px;
+        }
+        .images .d img{
+            height:300px;
+            width:300px;
+        }
+        .images .e img{
+            height:200px;
+            width:200px;
+        }
+        @keyframes animateg{
+    0%{
+        filter:hue-rotate(0deg)
+    }
+    100%{
+        filter:hue-rotate(360deg)
+    }
+}
+    </style>
+</head>
+<body>
+    <section id="grid">
+        <div class="images">
+            <div class="a"><img src="./img/chackup.jpg"></div>
+            <div class="b"><img src="./img/checkup.jpg"></div>
+            <div class="c"><img src="./img/checkup3.jpg"></div>
+            <div class="d"><img src="./img/checkup3.jpg"></div>
+            <div class="e"><img src="./img/chackup.jpg"></div>
+            
+        </div>
+    </section>
+</body>
+</html>
